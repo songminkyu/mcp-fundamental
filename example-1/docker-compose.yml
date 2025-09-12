@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mcp-sse-server:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python sse_server.py
+    
+  mcp-stdio-server:
+    build: .
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python stdio_server.py
+    stdin_open: true
+    tty: true
