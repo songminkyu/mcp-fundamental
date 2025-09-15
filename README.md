@@ -1,227 +1,278 @@
 # MCP Fundamental Examples
 
-이 프로젝트는 MCP(Model Context Protocol)의 기본 개념과 구현 방법을 학습하기 위한 예제 모음입니다. 두 가지 다른 접근 방식을 통해 MCP 서버와 클라이언트를 구현하는 방법을 보여줍니다.
+This project is a collection of examples for learning the fundamental concepts and implementation methods of MCP (Model Context Protocol). It demonstrates how to implement MCP servers and clients through two different approaches.
 
-## 📚 프로젝트 구조
+## 📚 Project Structure
 
 ```
 mcp-fundamental/
-├── example-1/              # 기본 MCP 라이브러리 사용
-│   ├── stdio_server.py     # stdio 방식 서버
-│   ├── sse_server.py       # SSE 방식 서버
-│   ├── stdio_client.py     # stdio 클라이언트
-│   ├── sse_client.py       # SSE 클라이언트
-│   ├── test_mcp.py         # 통합 테스트
-│   ├── run_tests.py        # 테스트 실행 도구
-│   ├── requirements.txt    # 의존성
-│   ├── Dockerfile          # Docker 설정
-│   ├── docker-compose.yml  # Docker Compose 설정
-│   └── README.md           # 상세 문서
-├── example-2/              # FastMCP 라이브러리 사용
-│   ├── stdio_server.py     # FastMCP stdio 서버
-│   ├── sse_server.py       # FastMCP SSE 서버
-│   ├── stdio_client.py     # stdio 클라이언트
-│   ├── sse_client.py       # SSE 클라이언트
-│   ├── test_mcp.py         # 통합 테스트
-│   ├── run_tests.py        # 테스트 실행 도구
-│   ├── requirements.txt    # 의존성
-│   └── README.md           # 상세 문서
-├── .gitignore              # Git 무시 파일
-└── README.md               # 이 파일
+├── example-1/              # Using basic MCP library
+│   ├── ko/                 # Korean version
+│   │   ├── stdio_server.py     # stdio method server
+│   │   ├── sse_server.py       # SSE method server
+│   │   ├── stdio_client.py     # stdio client
+│   │   ├── sse_client.py       # SSE client
+│   │   ├── test_mcp.py         # integrated tests
+│   │   ├── run_tests.py        # test execution tool
+│   │   ├── requirements.txt    # dependencies
+│   │   ├── Dockerfile          # Docker configuration
+│   │   ├── docker-compose.yml  # Docker Compose configuration
+│   │   └── README.md           # detailed documentation
+│   └── en/                 # English version
+│       └── [same files as ko/]
+├── example-2/              # Using FastMCP library
+│   ├── ko/                 # Korean version
+│   │   ├── stdio_server.py     # FastMCP stdio server
+│   │   ├── sse_server.py       # FastMCP SSE server
+│   │   ├── stdio_client.py     # stdio client
+│   │   ├── sse_client.py       # SSE client
+│   │   ├── test_mcp.py         # integrated tests
+│   │   ├── run_tests.py        # test execution tool
+│   │   ├── requirements.txt    # dependencies
+│   │   └── README.md           # detailed documentation
+│   └── en/                 # English version
+│       └── [same files as ko/]
+├── .gitignore              # Git ignore files
+├── README.md               # This file (English)
+└── README_ko.md           # Korean version
 ```
 
-## 🎯 학습 목표
+## 🎯 Learning Objectives
 
-이 프로젝트를 통해 다음을 학습할 수 있습니다:
+Through this project, you can learn:
 
-1. **MCP 기본 개념**: Model Context Protocol의 핵심 개념 이해
-2. **두 가지 구현 방식**: 기본 MCP vs FastMCP 비교
-3. **통신 방식**: STDIO vs SSE 방식의 차이점과 사용 사례
-4. **실제 구현**: 완전히 작동하는 서버와 클라이언트 구현
-5. **테스트 방법**: 자동화된 테스트를 통한 검증
+1. **MCP Basic Concepts**: Understanding the core concepts of Model Context Protocol
+2. **Two Implementation Approaches**: Comparison between basic MCP vs FastMCP
+3. **Communication Methods**: Differences and use cases of STDIO vs SSE methods
+4. **Actual Implementation**: Complete working server and client implementation
+5. **Testing Methods**: Verification through automated testing
 
-## 🚀 빠른 시작
+## 🚀 Quick Start
 
-### 1. 저장소 클론
+### 1. Clone Repository
 
 ```bash
 git clone <repository-url>
 cd mcp-fundamental
 ```
 
-### 2. 예제 선택
+### 2. Choose Example
 
-#### Example 1: 기본 MCP 라이브러리
+#### Example 1: Basic MCP Library
 ```bash
-cd example-1
+cd example-1/en  # or example-1/ko for Korean
 pip install -r requirements.txt
 python run_tests.py
 ```
 
-#### Example 2: FastMCP 라이브러리
+#### Example 2: FastMCP Library
 ```bash
-cd example-2
+cd example-2/en  # or example-2/ko for Korean
 pip install -r requirements.txt
 python run_tests.py
 ```
 
-## 📖 예제별 특징
+## 📖 Example Features
 
-### Example 1: 기본 MCP 라이브러리
+### Example 1: Basic MCP Library
 
-- **라이브러리**: 표준 MCP 라이브러리
-- **복잡도**: 중간 (더 많은 설정 필요)
-- **학습 가치**: MCP의 내부 동작 원리 이해
-- **적합한 경우**: MCP의 세부 사항을 깊이 이해하고 싶은 경우
+- **Library**: Standard MCP library
+- **Complexity**: Medium (requires more configuration)
+- **Learning Value**: Understanding internal workings of MCP
+- **Suitable for**: When you want to deeply understand MCP details
 
-**주요 특징:**
-- 수동으로 서버 설정
-- 명시적인 도구/리소스/프롬프트 정의
-- 세밀한 제어 가능
-- 교육적 가치 높음
+**Key Features:**
+- Manual server configuration
+- Explicit tool/resource/prompt definitions
+- Fine-grained control possible
+- High educational value
 
-### Example 2: FastMCP 라이브러리
+### Example 2: FastMCP Library
 
-- **라이브러리**: FastMCP (현대적 MCP 라이브러리)
-- **복잡도**: 낮음 (간단한 데코레이터 사용)
-- **학습 가치**: 빠른 프로토타이핑과 현대적 개발 방법
-- **적합한 경우**: 빠르게 MCP 서버를 구축하고 싶은 경우
+- **Library**: FastMCP (modern MCP library)
+- **Complexity**: Low (simple decorator usage)
+- **Learning Value**: Rapid prototyping and modern development methods
+- **Suitable for**: When you want to quickly build MCP servers
 
-**주요 특징:**
-- 데코레이터 기반 간단한 문법
-- 자동 타입 추론
-- 최소한의 코드로 구현
-- 프로덕션 환경에 적합
+**Key Features:**
+- Decorator-based simple syntax
+- Automatic type inference
+- Minimal code implementation
+- Suitable for production environments
 
-## 🔄 STDIO vs SSE 비교
+## 🔄 STDIO vs SSE Comparison
 
-| 구분 | STDIO 방식 | SSE 방식 |
-|------|------------|----------|
-| **통신 방식** | 표준 입출력 | HTTP + Server-Sent Events |
-| **사용 환경** | 로컬 프로세스 | 웹 서비스 |
-| **구현 복잡도** | 간단 | 복잡 |
-| **네트워크 지원** | 없음 | 있음 |
-| **실시간 스트리밍** | 제한적 | 지원 |
-| **확장성** | 제한적 | 높음 |
-| **배포** | 로컬 실행 | 웹 서버 배포 |
-| **사용 사례** | 로컬 도구, CLI | 웹 서비스, 원격 접근 |
+| Aspect | STDIO Method | SSE Method |
+|--------|--------------|------------|
+| **Communication** | Standard I/O | HTTP + Server-Sent Events |
+| **Environment** | Local process | Web service |
+| **Complexity** | Simple | Complex |
+| **Network Support** | None | Yes |
+| **Real-time Streaming** | Limited | Supported |
+| **Scalability** | Limited | High |
+| **Deployment** | Local execution | Web server deployment |
+| **Use Cases** | Local tools, CLI | Web services, remote access |
 
-## 🛠️ 제공되는 기능
+## 🛠️ Available Features
 
-### 도구 (Tools)
-- **greet**: 사용자 인사
-- **add**: 두 숫자 덧셈
-- **multiply**: 두 숫자 곱셈
-- **calculate**: 수학 표현식 계산
-- **get_system_info**: 시스템 정보 조회
-- **echo**: 메시지 반환
-- **get_server_status**: 서버 상태 조회 (SSE 전용)
+### Tools
+- **greet**: User greeting
+- **add**: Add two numbers
+- **multiply**: Multiply two numbers
+- **calculate**: Calculate mathematical expressions
+- **get_system_info**: Get system information
+- **echo**: Return message
+- **get_server_status**: Get server status (SSE only)
 
-### 리소스 (Resources)
-- **config://settings**: 서버 설정 파일
-- **file://readme**: README 리소스
+### Resources
+- **config://settings**: Server configuration file
+- **file://readme**: README resource
 
-### 프롬프트 (Prompts)
-- **code_review**: 코드 리뷰 프롬프트
-- **explain_code**: 코드 설명 프롬프트
+### Prompts
+- **code_review**: Code review prompt
+- **explain_code**: Code explanation prompt
 
-## 🧪 테스트 실행
+## 🧪 Running Tests
 
-### 개별 예제 테스트
-
-```bash
-# Example 1 테스트
-cd example-1
-python run_tests.py              # 모든 테스트
-python run_tests.py --stdio-only # STDIO만
-python run_tests.py --sse-only   # SSE만
-
-# Example 2 테스트
-cd example-2
-python run_tests.py              # 모든 테스트
-python run_tests.py --stdio-only # STDIO만
-python run_tests.py --sse-only   # SSE만
-```
-
-### 개별 서버/클라이언트 실행
+### Individual Example Tests
 
 ```bash
-# 서버 실행
-python stdio_server.py    # STDIO 서버
-python sse_server.py      # SSE 서버
+# Example 1 tests
+cd example-1/en  # or example-1/ko
+python run_tests.py              # All tests
+python run_tests.py --stdio-only # STDIO only
+python run_tests.py --sse-only   # SSE only
 
-# 클라이언트 실행
-python stdio_client.py    # STDIO 클라이언트
-python sse_client.py      # SSE 클라이언트
+# Example 2 tests
+cd example-2/en  # or example-2/ko
+python run_tests.py              # All tests
+python run_tests.py --stdio-only # STDIO only
+python run_tests.py --sse-only   # SSE only
 ```
 
-## 🐳 Docker 사용
-
-### Example 1 Docker 실행
+### Individual Server/Client Execution
 
 ```bash
-cd example-1
-docker-compose up mcp-sse-server    # SSE 서버만
-docker-compose up mcp-stdio-server  # STDIO 서버만
-docker-compose up                   # 모든 서비스
+# Run server
+python stdio_server.py    # STDIO server
+python sse_server.py      # SSE server
+
+# Run client
+python stdio_client.py    # STDIO client
+python sse_client.py      # SSE client
 ```
 
-## 📚 학습 순서 권장
+## 🐳 Using Docker
 
-1. **기본 개념 이해**: MCP가 무엇인지, 왜 필요한지 이해
-2. **Example 1 실행**: 기본 MCP 라이브러리로 구현된 예제 실행
-3. **코드 분석**: Example 1의 서버/클라이언트 코드 분석
-4. **Example 2 실행**: FastMCP로 구현된 예제 실행
-5. **비교 분석**: 두 예제의 차이점과 장단점 비교
-6. **자신만의 도구 추가**: 기존 예제에 새로운 도구 추가해보기
+The project now supports multiple language and example combinations through Docker. You can run any combination of examples and languages.
 
-## 🔧 문제 해결
+### Available Services
 
-### 일반적인 문제
+| Service | Example | Language | Port | Description |
+|---------|---------|----------|------|-------------|
+| `mcp-sse-server-ex1-ko` | 1 | Korean | 8000 | Example 1 SSE server (Korean) |
+| `mcp-stdio-server-ex1-ko` | 1 | Korean | - | Example 1 STDIO server (Korean) |
+| `mcp-sse-server-ex1-en` | 1 | English | 8001 | Example 1 SSE server (English) |
+| `mcp-stdio-server-ex1-en` | 1 | English | - | Example 1 STDIO server (English) |
+| `mcp-sse-server-ex2-ko` | 2 | Korean | 8080 | Example 2 SSE server (Korean) |
+| `mcp-stdio-server-ex2-ko` | 2 | Korean | - | Example 2 STDIO server (Korean) |
+| `mcp-sse-server-ex2-en` | 2 | English | 8081 | Example 2 SSE server (English) |
+| `mcp-stdio-server-ex2-en` | 2 | English | - | Example 2 STDIO server (English) |
 
-1. **의존성 설치 실패**
+**Note**: All services use the same root `requirements.txt` file for dependencies.
+
+### Docker Commands
+
+```bash
+# Build the Docker image
+docker-compose build
+
+# Run specific services
+docker-compose up mcp-sse-server-ex1-en          # Example 1 English SSE server
+docker-compose up mcp-sse-server-ex2-ko          # Example 2 Korean SSE server
+docker-compose up mcp-stdio-server-ex1-ko        # Example 1 Korean STDIO server
+
+# Run all services
+docker-compose up
+
+# Run in background
+docker-compose up -d
+
+# Stop all services
+docker-compose down
+```
+
+### Quick Start Examples
+
+```bash
+# Example 1 - English (Basic MCP)
+docker-compose up mcp-sse-server-ex1-en
+# Access at: http://localhost:8001
+
+# Example 2 - Korean (FastMCP)
+docker-compose up mcp-sse-server-ex2-ko
+# Access at: http://localhost:8080
+
+# Run both examples simultaneously
+docker-compose up mcp-sse-server-ex1-en mcp-sse-server-ex2-ko
+```
+
+## 📚 Recommended Learning Order
+
+1. **Understand Basic Concepts**: Understand what MCP is and why it's needed
+2. **Run Example 1**: Execute examples implemented with basic MCP library
+3. **Analyze Code**: Analyze server/client code in Example 1
+4. **Run Example 2**: Execute examples implemented with FastMCP
+5. **Compare Analysis**: Compare differences and pros/cons of both examples
+6. **Add Your Own Tools**: Try adding new tools to existing examples
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+1. **Dependency Installation Failure**
    ```bash
    pip install --upgrade pip
    pip install -r requirements.txt
    ```
 
-2. **포트 충돌 (SSE 서버)**
-   - 8080 포트가 사용 중인 경우 다른 포트 사용
-   - `sse_server.py`에서 포트 번호 변경
+2. **Port Conflict (SSE Server)**
+   - Use a different port if 8080 is in use
+   - Change port number in `sse_server.py`
 
-3. **STDIO 클라이언트 연결 실패**
-   - Python 경로 확인
-   - 서버 스크립트 경로 확인
+3. **STDIO Client Connection Failure**
+   - Check Python path
+   - Check server script path
 
-4. **SSE 클라이언트 연결 실패**
-   - SSE 서버가 실행 중인지 확인
-   - 방화벽 설정 확인
+4. **SSE Client Connection Failure**
+   - Check if SSE server is running
+   - Check firewall settings
 
-### 디버깅
+### Debugging
 
 ```bash
-# 상세한 로그와 함께 실행
+# Run with detailed logs
 python -u stdio_client.py
 python -u sse_client.py
 python -u test_mcp.py
 ```
 
-## 📖 추가 자료
+## 📖 Additional Resources
 
-- [MCP 공식 문서](https://modelcontextprotocol.io/)
+- [MCP Official Documentation](https://modelcontextprotocol.io/)
 - [FastMCP GitHub](https://github.com/pydantic/fastmcp)
 - [Medium: MCP Clients: Stdio vs SSE](https://medium.com/@vkrishnan9074/mcp-clients-stdio-vs-sse-a53843d9aabb)
 
-## 🤝 기여
+## 🤝 Contributing
 
-버그 리포트, 기능 제안, 또는 개선 사항이 있으시면 이슈로 등록해주세요.
+Please register bug reports, feature suggestions, or improvements as issues.
 
-## 📄 라이선스
+## 📄 License
 
-이 프로젝트는 교육 목적으로 작성되었습니다.
+This project is written for educational purposes.
 
 ---
 
 **Happy Learning! 🎉**
 
-MCP의 세계에 오신 것을 환영합니다. 이 예제들을 통해 MCP의 강력함과 유연성을 경험해보세요!
+Welcome to the world of MCP. Experience the power and flexibility of MCP through these examples!

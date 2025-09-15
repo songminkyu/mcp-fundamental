@@ -1,0 +1,86 @@
+version: '3.8'
+
+services:
+  # Example 1 - Korean
+  mcp-sse-server-ex1-ko:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LANGUAGE=ko
+      - EXAMPLE=1
+    command: python example-1/ko/sse_server.py
+    
+  mcp-stdio-server-ex1-ko:
+    build: .
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LANGUAGE=ko
+      - EXAMPLE=1
+    command: python example-1/ko/stdio_server.py
+    stdin_open: true
+    tty: true
+
+  # Example 1 - English
+  mcp-sse-server-ex1-en:
+    build: .
+    ports:
+      - "8001:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LANGUAGE=en
+      - EXAMPLE=1
+    command: python example-1/en/sse_server.py
+    
+  mcp-stdio-server-ex1-en:
+    build: .
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LANGUAGE=en
+      - EXAMPLE=1
+    command: python example-1/en/stdio_server.py
+    stdin_open: true
+    tty: true
+
+  # Example 2 - Korean
+  mcp-sse-server-ex2-ko:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LANGUAGE=ko
+      - EXAMPLE=2
+    command: python example-2/ko/sse_server.py
+    
+  mcp-stdio-server-ex2-ko:
+    build: .
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LANGUAGE=ko
+      - EXAMPLE=2
+    command: python example-2/ko/stdio_server.py
+    stdin_open: true
+    tty: true
+
+  # Example 2 - English
+  mcp-sse-server-ex2-en:
+    build: .
+    ports:
+      - "8081:8080"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LANGUAGE=en
+      - EXAMPLE=2
+    command: python example-2/en/sse_server.py
+    
+  mcp-stdio-server-ex2-en:
+    build: .
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LANGUAGE=en
+      - EXAMPLE=2
+    command: python example-2/en/stdio_server.py
+    stdin_open: true
+    tty: true

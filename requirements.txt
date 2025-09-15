@@ -1,0 +1,14 @@
+# MCP Fundamental Examples - Root Requirements
+# This file contains all dependencies needed for both examples
+
+# Core MCP libraries
+mcp>=1.0.0
+fastmcp>=0.1.0
+
+# Web framework and server
+starlette>=0.27.0
+uvicorn>=0.22.0
+aiohttp>=3.8.0
+
+# Additional dependencies for example-2
+psutil>=5.9.0
