@@ -14,9 +14,6 @@ mcp-fundamental/
 │   │   ├── sse_client.py       # SSE client
 │   │   ├── test_mcp.py         # integrated tests
 │   │   ├── run_tests.py        # test execution tool
-│   │   ├── requirements.txt    # dependencies
-│   │   ├── Dockerfile          # Docker configuration
-│   │   ├── docker-compose.yml  # Docker Compose configuration
 │   │   └── README.md           # detailed documentation
 │   └── en/                 # English version
 │       └── [same files as ko/]
@@ -28,13 +25,14 @@ mcp-fundamental/
 │   │   ├── sse_client.py       # SSE client
 │   │   ├── test_mcp.py         # integrated tests
 │   │   ├── run_tests.py        # test execution tool
-│   │   ├── requirements.txt    # dependencies
 │   │   └── README.md           # detailed documentation
 │   └── en/                 # English version
 │       └── [same files as ko/]
 ├── .gitignore              # Git ignore files
+├── Dockerfile              # Docker configuration
+├── docker-compose.yml      # Docker Compose configuration
 ├── README.md               # This file (English)
-└── README_ko.md           # Korean version
+└── README_ko.md            # Korean version
 ```
 
 ## 🎯 Learning Objectives
@@ -276,3 +274,4 @@ This project is written for educational purposes.
 **Happy Learning! 🎉**
 
 Welcome to the world of MCP. Experience the power and flexibility of MCP through these examples!
+
