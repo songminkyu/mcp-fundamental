@@ -6,8 +6,8 @@ This project is a collection of examples for learning the fundamental concepts a
 
 ```
 mcp-fundamental/
-├── example-1/              # Using basic MCP library
-│   ├── ko/                 # Korean version
+├── example-1/                  # Using basic MCP library
+│   ├── ko/                     # Korean version
 │   │   ├── stdio_server.py     # stdio method server
 │   │   ├── sse_server.py       # SSE method server
 │   │   ├── stdio_client.py     # stdio client
@@ -15,10 +15,10 @@ mcp-fundamental/
 │   │   ├── test_mcp.py         # integrated tests
 │   │   ├── run_tests.py        # test execution tool
 │   │   └── README.md           # detailed documentation
-│   └── en/                 # English version
+│   └── en/                     # English version
 │       └── [same files as ko/]
-├── example-2/              # Using FastMCP library
-│   ├── ko/                 # Korean version
+├── example-2/                  # Using FastMCP library
+│   ├── ko/                     # Korean version
 │   │   ├── stdio_server.py     # FastMCP stdio server
 │   │   ├── sse_server.py       # FastMCP SSE server
 │   │   ├── stdio_client.py     # stdio client
@@ -26,7 +26,7 @@ mcp-fundamental/
 │   │   ├── test_mcp.py         # integrated tests
 │   │   ├── run_tests.py        # test execution tool
 │   │   └── README.md           # detailed documentation
-│   └── en/                 # English version
+│   └── en/                     # English version
 │       └── [same files as ko/]
 ├── .gitignore              # Git ignore files
 ├── Dockerfile              # Docker configuration
@@ -274,4 +274,5 @@ This project is written for educational purposes.
 **Happy Learning! 🎉**
 
 Welcome to the world of MCP. Experience the power and flexibility of MCP through these examples!
+
 
