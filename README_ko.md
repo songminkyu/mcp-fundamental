@@ -14,8 +14,6 @@ mcp-fundamental/
 │   ├── test_mcp.py         # 통합 테스트
 │   ├── run_tests.py        # 테스트 실행 도구
 │   ├── requirements.txt    # 의존성
-│   ├── Dockerfile          # Docker 설정
-│   ├── docker-compose.yml  # Docker Compose 설정
 │   └── README.md           # 상세 문서
 ├── example-2/              # FastMCP 라이브러리 사용
 │   ├── stdio_server.py     # FastMCP stdio 서버
@@ -26,6 +24,8 @@ mcp-fundamental/
 │   ├── run_tests.py        # 테스트 실행 도구
 │   ├── requirements.txt    # 의존성
 │   └── README.md           # 상세 문서
+├── Dockerfile              # (루트) Docker 설정
+├── docker-compose.yml      # (루트) Docker Compose 설정
 ├── .gitignore              # Git 무시 파일
 └── README.md               # 이 파일
 ```
