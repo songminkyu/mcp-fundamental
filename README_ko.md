@@ -7,26 +7,33 @@
 ```
 mcp-fundamental/
 ├── example-1/              # 기본 MCP 라이브러리 사용
-│   ├── stdio_server.py     # stdio 방식 서버
-│   ├── sse_server.py       # SSE 방식 서버
-│   ├── stdio_client.py     # stdio 클라이언트
-│   ├── sse_client.py       # SSE 클라이언트
-│   ├── test_mcp.py         # 통합 테스트
-│   ├── run_tests.py        # 테스트 실행 도구
-│   └── README.md           # 상세 문서
-├── example-2/              # FastMCP 라이브러리 사용
-│   ├── stdio_server.py     # FastMCP stdio 서버
-│   ├── sse_server.py       # FastMCP SSE 서버
-│   ├── stdio_client.py     # stdio 클라이언트
-│   ├── sse_client.py       # SSE 클라이언트
-│   ├── test_mcp.py         # 통합 테스트
-│   ├── run_tests.py        # 테스트 실행 도구
-│   └── README.md           # 상세 문서
-├── requirements.txt        # 의존성
-├── Dockerfile              # (루트) Docker 설정
-├── docker-compose.yml      # (루트) Docker Compose 설정
-├── .gitignore              # Git 무시 파일
-└── README.md               # 이 파일
+│   ├── ko/                 # 한국어 버전
+│   │   ├── stdio_server.py     # stdio method server
+│   │   ├── sse_server.py       # SSE method server
+│   │   ├── stdio_client.py     # stdio client
+│   │   ├── sse_client.py       # SSE client
+│   │   ├── test_mcp.py         # integrated tests
+│   │   ├── run_tests.py        # test execution tool
+│   │   └── README.md           # detailed documentation
+│   └── en/                 # English version
+│       └── [same files as ko/]
+├── example-2/              # Using FastMCP library
+│   ├── ko/                 # Korean version
+│   │   ├── stdio_server.py     # FastMCP stdio server
+│   │   ├── sse_server.py       # FastMCP SSE server
+│   │   ├── stdio_client.py     # stdio client
+│   │   ├── sse_client.py       # SSE client
+│   │   ├── test_mcp.py         # integrated tests
+│   │   ├── run_tests.py        # test execution tool
+│   │   └── README.md           # detailed documentation
+│   └── en/                 # English version
+│       └── [same files as ko/]
+├── .gitignore              # Git ignore files
+├── Dockerfile              # Docker configuration
+├── docker-compose.yml      # Docker Compose configuration
+├── requirements.txt        # dependencies
+├── README.md               # This file (English)
+└── README_ko.md            # Korean version
 ```
 
 ## 🎯 학습 목표
